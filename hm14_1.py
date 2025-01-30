@@ -46,7 +46,7 @@ class Student(Human):
         """
         Ініціалізує екземпляр класу Student
 
-        Параметри:
+        Parameters:
             gender (str): стать студента
             age (int): вік студента
             first_name (str): ім'я студента
@@ -97,13 +97,13 @@ class Group:
 
     def add_student(self, student: Student):
         """
-        Додає студента до групи.
+        Додає студента до групи
 
         Parameters:
             student (Student): об'єкт класу Student, який додається до групи
 
         Raises:
-            GroupFullError: якщо група вже містить максимальну кількість студентів.
+            GroupError: якщо група вже містить максимальну кількість студентів
         """
         if len(self.group) >= self.max_size:
             raise GroupError()
